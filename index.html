@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="flip-timer">
+    <div class="flip-unit">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" id="day">00</div>
+        </div>
+      </div>
+      <div class="flip-label">Дни</div>
+    </div>
+
+    <div class="flip-unit">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" id="hour">00</div>
+        </div>
+      </div>
+      <div class="flip-label">Часы</div>
+    </div>
+
+    <div class="flip-unit">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" id="min">00</div>
+        </div>
+      </div>
+      <div class="flip-label">Минуты</div>
+    </div>
+
+    <div class="flip-unit">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front" id="sec">00</div>
+        </div>
+      </div>
+      <div class="flip-label">Секунды</div>
+    </div>
+  </div>
+  <div class="timer-controls">
+    <button id="start-btn">Старт</button>
+    <button id="pause-btn">Пауза</button>
+    <button id="reset-btn">Сброс</button>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>
