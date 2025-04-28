@@ -14,6 +14,9 @@ class Timer {
     this.isActive = false;
     this.onTick = onTick;
     this.startTime = 0;
+    this.isActive = false;
+    this.onTick = onTick;
+    this.startTime = 0;
   }
 
   start() {
@@ -35,15 +38,20 @@ class Timer {
   }
 
   stop() {
+    if (!this.isActive) {
+      return;
+    }
+    this.isActive = false;
     clearInterval(this.intervalId);
     this.isActive = false;
     this.startTime = Date.now() - this.startTime;
   }
 
   reset() {
-    if (this.isActive){
-      return
+    if (this.isActive) {
+      return;
     }
+    this.isActive = false;
     clearInterval(this.intervalId);
     this.startTime = 0;
     this.onTick(this.getTimeComponents(0));
